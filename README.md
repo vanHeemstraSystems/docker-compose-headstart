@@ -7,7 +7,7 @@ On this page you build a simple Python web application running on Docker Compose
 
 ## Prerequisites
 
-Make sure you have already installed both Docker Engine and Docker Compose. You don’t need to install Python or Redis, as both are provided by Docker images.
+Make sure you have already installed both [Docker Engine](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/). You don’t need to install Python or Redis, as both are provided by Docker images.
 
 ## Step 1: Setup
 
