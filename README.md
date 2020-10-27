@@ -9,6 +9,10 @@ On this page you build a simple Python web application running on Docker Compose
 
 Make sure you have already installed both [Docker Engine](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/). You don’t need to install Python or Redis, as both are provided by Docker images.
 
+## Install Google Chrome
+
+See https://www.cyberciti.biz/faq/howto-install-google-chrome-on-redhat-rhel-fedora-centos-linux/
+
 ## The Post-installation steps for Linux documentation reveals the following steps:
 
 See https://stackoverflow.com/questions/21871479/docker-cant-connect-to-docker-daemon
