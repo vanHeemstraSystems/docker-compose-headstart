@@ -9,6 +9,27 @@ On this page you build a simple Python web application running on Docker Compose
 
 Make sure you have already installed both [Docker Engine](https://docs.docker.com/get-docker/) and [Docker Compose](https://docs.docker.com/compose/install/). You don’t need to install Python or Redis, as both are provided by Docker images.
 
+## The Post-installation steps for Linux documentation reveals the following steps:
+
+See https://stackoverflow.com/questions/21871479/docker-cant-connect-to-docker-daemon
+
+1. Create the docker group.
+```
+sudo groupadd docker
+```
+
+2. Add the user to the docker group.
+```
+sudo usermod -aG docker $(whoami)
+```
+
+3. Log out and log back in to ensure docker runs with correct permissions.
+
+4. Start docker.
+```
+sudo service docker start
+```
+
 ## Step 1: Setup
 
 Define the application dependencies.
