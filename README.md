@@ -63,9 +63,35 @@ redis
 
 ## Step 2: Create a Dockerfile
 
+In this step, you write a Dockerfile that builds a Docker image. The image contains all the dependencies the Python application requires, including Python itself.
 
+In your project directory, create a file named Dockerfile and paste the following:
 
+```
+FROM python:3.7-alpine
+WORKDIR /code
+ENV FLASK_APP=app.py
+ENV FLASK_RUN_HOST=0.0.0.0
+RUN apk add --no-cache gcc musl-dev linux-headers
+COPY requirements.txt requirements.txt
+RUN pip install -r requirements.txt
+EXPOSE 5000
+COPY . .
+CMD ["flask", "run"]
+```
 
+This tells Docker to:
+
+- Build an image starting with the Python 3.7 image.
+- Set the working directory to /code.
+- Set environment variables used by the flask command.
+- Install gcc and other dependencies
+- Copy requirements.txt and install the Python dependencies.
+- Add metadata to the image to describe that the container is listening on port 5000
+- Copy the current directory . in the project to the workdir . in the image.
+- Set the default command for the container to flask run.
+
+For more information on how to write Dockerfiles, see the [Docker user guide](https://docs.docker.com/develop/) and the [Dockerfile reference](https://docs.docker.com/engine/reference/builder/).
 
 ## Step 3: Define services in a Compose file
 
