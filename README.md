@@ -11,7 +11,14 @@ Make sure you have already installed both [Docker Engine](https://docs.docker.co
 
 ## Step 1: Setup
 
+Define the application dependencies.
 
+1. Create a directory for the project:
+
+```
+$ mkdir composetest
+$ cd composetest
+```
 
 
 ## Step 2: Create a Dockerfile
